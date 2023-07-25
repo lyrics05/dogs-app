@@ -1,0 +1,32 @@
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inputP{
+    color: #7b8f96;
+}
+.pdeMaximo{
+    color: #7b8f96;
+}
+.flecha{
+   width: 30px;
+   height: 30px;
+}
+.buttonPagi{
+    border: none;
+    background-color:  #64766A;;
+    border-radius: 56%;
+}
+
+.inputPagi{
+    width: 50px;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px solid;
+    background-color: transparent;
+    color: #7b8f96;
+    font-weight: 400;
+}

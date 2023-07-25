@@ -1,0 +1,29 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    border-radius: 6px;
+}
+
+.imgFavorite{
+    width:100%;
+    height: 200px;
+
+    border-radius: 6px;
+}
+.containerInfo{
+   
+    background-color: #C0A9BD;
+    margin-top: 20px;
+    border-radius: 6px;
+    
+    
+}
+.buttonFavorite{
+    border: none;
+    background-color: #64766A;
+    color: #f4f2f3;
+    padding: 8px;
+    cursor: pointer;
+  
+}

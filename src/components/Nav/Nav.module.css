@@ -1,0 +1,22 @@
+.container{
+    background-image: url(../../img/backgroundog.jpg);
+    display: flex;
+    justify-content: space-between;
+}
+
+.ul{
+    display: flex;
+list-style: none;
+    gap: 10px;
+}
+.logo{
+    width: 50px;
+}
+li{
+    color: #64766a;
+    font-size: 25px;
+    font-weight: 700;
+}
+li:hover{
+    color: #C0A9BD;
+}

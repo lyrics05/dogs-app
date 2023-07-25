@@ -1,0 +1,32 @@
+.container{
+   
+}
+
+.containerInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #94A7AE;
+}
+p span{
+    color: #64766A;
+}
+
+P{
+    color: white;
+    font-size: 25px;
+    font-weight: 400 ;
+}
+
+.detailFavorite{
+    border: none;
+    background-color: #C0A9BD;
+    color: #f4f2f3;
+    padding: 8px;
+    cursor: pointer;;
+}
+
+.imgDetail{
+    width: 500px;
+    height: 350px;
+}
