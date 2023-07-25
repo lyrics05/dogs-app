@@ -19,3 +19,9 @@ input{
     cursor: pointer;
 
 }
+/* MEDIA QUERIES */
+@media (max-width:480px) {
+    input{
+        width: 50%;
+    }
+}

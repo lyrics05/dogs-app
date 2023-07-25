@@ -54,3 +54,12 @@ a{
     width: 200px;
     height: 200px;
 }
+
+/* MEDIA QUERIES*/
+
+@media (max-width:480px) {
+      .cardContainer{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+      }
+}

@@ -30,3 +30,23 @@ P{
     width: 500px;
     height: 350px;
 }
+/* MEDIA QUERIES */
+
+@media (max-width: 480px) {
+     .container{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+     }
+
+     .imgDetail{
+        width: 100%;
+        border-radius: 6px;
+     }
+     .containerInfo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+     }
+}
