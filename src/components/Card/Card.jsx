@@ -12,11 +12,12 @@ import Pagination from '../Pagination/Pagination';
 const Card = () => {
   const dogs = useSelector((state) => state.dogs);
   const [pagina, setPagina] = useState(1);
-  const porPagina = 16;
-  const quantityDogPage = pagina * porPagina;
-  const firstDogPage = quantityDogPage - porPagina;
-  const showDogsPage = dogs.slice(firstDogPage, quantityDogPage);
-  const maximo = Math.ceil(dogs.length / porPagina);
+  const currentPage = useSelector((state) => state.currentPage);
+  const [dogsPerPage, setDogssPerPage] = useState(8);
+  const lastDogPage = currentPage * dogsPerPage;
+  const firstDogPage = lastDogPage - dogsPerPage;
+  const showDogsPage = dogs.slice(firstDogPage, lastDogPage );
+  const maximo = Math.ceil(dogs.length / dogsPerPage);
 
   const dispatch = useDispatch();
 

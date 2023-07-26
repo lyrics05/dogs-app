@@ -28,8 +28,8 @@ const Detail = () => {
                         <img className={styles.imgDetail}  src={dog[0].image.url} alt="" />
                     </div>
                     <div>
-                        <p>peso: <span>{dog[0].weight.metric}</span></p>
-                        <p>altura: <span>{dog[0].height.metric}</span></p>
+                        <p>peso: <span>{dog[0].weight.metric}</span> Kg</p>
+                        <p>altura: <span>{dog[0].height.metric}</span>cm</p>
                         <p>Grupo de raza: <span>{dog[0].breed_group}</span></p>
                         <p>Tiempo de Vida: <span>{dog[0].life_span}</span></p>
                         <p>Origen: <span>{dog[0].origin}</span></p>

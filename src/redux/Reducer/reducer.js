@@ -1,10 +1,11 @@
- import { GET_DOGS, GET_FAVORITE, SEARCH_DOG, GET_DETAIL, DELETE_FAVORITE } from "../actions/actions";
+ import { GET_DOGS, GET_FAVORITE, SEARCH_DOG, GET_DETAIL, DELETE_FAVORITE,SET_PAGE } from "../actions/actions";
 const initialState = {
     dogs:[],
     allDogs:[],
     details:{},
     favorites:[],
-    search:[]
+    search:[],
+    currentPage:1
 }
 function rootReducer (state=initialState, action){
      switch (action.type) {
@@ -45,6 +46,11 @@ function rootReducer (state=initialState, action){
           return{
             ...state,
             favorites: state.favorites.filter(f=>f.id!== parseInt(action.payload))
+          }
+        case SET_PAGE:
+          return{
+            ...state,
+            currentPage:action.payload
           }
          
      

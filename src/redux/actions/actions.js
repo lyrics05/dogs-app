@@ -4,6 +4,9 @@ export const GET_FAVORITE = "GET_FAVORITE"
 export const SEARCH_DOG = "SEARCH_DOG"
 export const GET_DETAIL = "GET_DETAIL"
 export const DELETE_FAVORITE = "DELETE_FAVORITE"
+// actions.js
+export const SET_PAGE = 'SET_PAGE'; // Verifica que esté escrito exactamente así
+
 
 
 
@@ -41,6 +44,12 @@ export function detail(payload){
 export function deleteFvorite(payload){
     return{
         type:DELETE_FAVORITE,
+        payload,
+    }
+}
+export function setPage(payload){
+    return{
+        type:SET_PAGE,
         payload,
     }
 }
