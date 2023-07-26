@@ -13,7 +13,7 @@ const Card = () => {
   const dogs = useSelector((state) => state.dogs);
   const [pagina, setPagina] = useState(1);
   const currentPage = useSelector((state) => state.currentPage);
-  const [dogsPerPage, setDogssPerPage] = useState(8);
+  const [dogsPerPage, setDogssPerPage] = useState(12);
   const lastDogPage = currentPage * dogsPerPage;
   const firstDogPage = lastDogPage - dogsPerPage;
   const showDogsPage = dogs.slice(firstDogPage, lastDogPage );
