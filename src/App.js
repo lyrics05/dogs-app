@@ -5,6 +5,7 @@ import Nav from './components/Nav/Nav';
 import Favorites from './components/Favorites/Favorites';
 import SearchCard from './components/Search/SearchCard';
 import Detail from './components/Detail/Detail';
+import { ProtectedRoute } from './components/ProtectedRoute';
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
     <div className="App">
       <Nav/>
       <Routes>
-        <Route path={"/"} element = {<Home/>}/>
+        <Route path={"/"} element = {<ProtectedRoute component={<Home/>}/>}/>
         <Route path={"/favorites"} element = {<Favorites/>}/>
         <Route path={"/search"} element = {<SearchCard/>}/>
         <Route path={"/dog/:id"} element = {<Detail/>}/>

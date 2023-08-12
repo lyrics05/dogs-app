@@ -4,8 +4,11 @@ import styles from "../Favorites/Favorites.module.css"
 import { deleteFvorite } from '../../redux/actions/actions'
 import { Link } from 'react-router-dom'
 import swal from 'sweetalert'
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Favorites = () => {
+  const { user } = useAuth0()
+  console.log("ESTO ES USER=========>",user)
     const favorito = useSelector((state) => state.favorites)
     const dispatch = useDispatch()
     function borrarFavorite(id){
