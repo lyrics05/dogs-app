@@ -13,8 +13,8 @@ function App() {
     <div className="App">
       <Nav/>
       <Routes>
-        <Route path={"/"} element = {<ProtectedRoute component={<Home/>}/>}/>
-        <Route path={"/favorites"} element = {<Favorites/>}/>
+        <Route path={"/"} element ={<Home/>}/>
+        <Route path={"/favorites"} element = {<ProtectedRoute component={<Favorites/>}/>}/>
         <Route path={"/search"} element = {<SearchCard/>}/>
         <Route path={"/dog/:id"} element = {<Detail/>}/>
       </Routes>
