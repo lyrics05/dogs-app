@@ -34,7 +34,7 @@ const Favorites = () => {
                         <div className={styles.containerInfo} key={d.id}> {/* Agrega key para evitar advertencia */}
                             <p>{d.id}</p>
                             <Link to={`/dog/${d.id}`}><p>{d.name}</p></Link>
-                            <Link to={`/dog/${d.id}`}><img className={styles.imgFavorite} src={d.image.url} alt="" /></Link>
+                            <Link to={`/dog/${d.id}`}><img className={styles.imgFavorite} src={`https://cdn2.thedogapi.com/images/${d.reference_image_id}.jpg`} alt="" /></Link>
                             <button onClick={()=>borrarFavorite(d.id)} className={styles.buttonFavorite} >Delete</button>
                         </div>
                     )

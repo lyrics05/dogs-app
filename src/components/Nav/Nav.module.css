@@ -20,3 +20,17 @@ li{
 li:hover{
     color: #C0A9BD;
 }
+
+.homeDiv{
+    display: flex;
+}
+.buttonSearch{
+    background-color: #C0A9BD;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}

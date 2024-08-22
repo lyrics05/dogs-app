@@ -12,6 +12,7 @@ const SearchCard = () => {
 
     function handleFavorite(id){
         const valor = dogss.find((d)=>d.id==id)
+        console.log("esto es valor",valor)
         dispatch(addFavorite(valor))
     }
     return (
@@ -21,8 +22,8 @@ const SearchCard = () => {
                 return(
                    <div>
                      <p>{d.id}</p>
-                    <Link to={`/pokemon/${d.id}`}><p>{d.name}</p></Link>
-                    <Link to={`/pokemon/${d.id}`}><img className={styles.img} src={d.image.url} alt="" /></Link>
+                    <Link to={`/dog/${d.id}`}><p>{d.name}</p></Link>
+                    <Link to={`/dog/${d.id}`}><img className={styles.img} src={`https://cdn2.thedogapi.com/images/${d.reference_image_id}.jpg`} alt="" /></Link>
                      <button className={styles.button} onClick={(id)=>handleFavorite(d.id)}>Add to favorites</button>
                    </div>
                 )

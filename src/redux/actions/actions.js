@@ -4,6 +4,7 @@ export const GET_FAVORITE = "GET_FAVORITE"
 export const SEARCH_DOG = "SEARCH_DOG"
 export const GET_DETAIL = "GET_DETAIL"
 export const DELETE_FAVORITE = "DELETE_FAVORITE"
+export const GO_TO_HOME = "GO_TO_HOME"
 // actions.js
 export const SET_PAGE = 'SET_PAGE'; // Verifica que esté escrito exactamente así
 
@@ -32,6 +33,12 @@ export function addFavorite (dog){
 export function searchDog(payload){
     return{
         type:SEARCH_DOG,
+        payload,
+    }
+}
+export function goToHome(payload){
+    return{
+        type:GO_TO_HOME,
         payload,
     }
 }

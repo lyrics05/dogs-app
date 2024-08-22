@@ -42,7 +42,7 @@ const Card = () => {
                   <p className={styles.name}>{d.name}</p>
                 </Link>
                 <Link to={`/dog/${d.id}`}>
-                  <img className={styles.img} src={d.image.url} alt="" />
+                  <img className={styles.img} src={`https://cdn2.thedogapi.com/images/${d.reference_image_id}.jpg`} alt="" />
                 </Link>
                 <button
                   className={styles.buttonCard}

@@ -6,11 +6,14 @@ import { Link, redirect, useNavigate } from 'react-router-dom';
 import styles from '../Search/Search.module.css';
 import { Navigate } from 'react-router-dom'; 
 import swal from 'sweetalert';
+import { useSelector } from 'react-redux';
 
 const Search = () => {
   const [input, setInput] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate()
+ 
+  
 
   function handleChange(e) {
     setInput(e.target.value);
@@ -27,7 +30,9 @@ const Search = () => {
         navigate("/search")
       },2000)
      }
+
   }
+  
 
   return (
     <div className={styles.container}>

@@ -25,7 +25,7 @@ const Detail = () => {
             {dog.length ? (
                 <div className={styles.containerInfo}>
                     <div className='imagen-container'>
-                        <img className={styles.imgDetail}  src={dog[0].image.url} alt="" />
+                        <img className={styles.imgDetail}  src={`https://cdn2.thedogapi.com/images/${dog[0].reference_image_id}.jpg`} alt="" />
                     </div>
                     <div>
                         <p>peso: <span>{dog[0].weight.metric}</span> Kg</p>

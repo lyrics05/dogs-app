@@ -1,4 +1,5 @@
- import { GET_DOGS, GET_FAVORITE, SEARCH_DOG, GET_DETAIL, DELETE_FAVORITE,SET_PAGE } from "../actions/actions";
+ import Search from "../../components/Search/Search";
+import { GET_DOGS, GET_FAVORITE, SEARCH_DOG, GET_DETAIL, DELETE_FAVORITE,SET_PAGE,GO_TO_HOME } from "../actions/actions";
 const initialState = {
     dogs:[],
     allDogs:[],
@@ -13,24 +14,31 @@ function rootReducer (state=initialState, action){
           return{
             ...state,
             dogs:action.payload,
-            allDogs:action.payload
+            allDogs:action.payload,
+            currentPage:state.currentPage
           }
         case GET_FAVORITE:
           return{
             ...state,
             favorites:state.favorites.concat(action.payload)
           }
+          case GO_TO_HOME:
+            return{
+              ...state,
+              currentPage:1
+            }
         case SEARCH_DOG:
           try {
             const dogs = [...state.allDogs]
             const valor = dogs.filter((d)=> d.name.toLowerCase() === action.payload.toLowerCase())
-            console.log("esto es valor ========>",dogs)
+            console.log("esto es valor ========>",valor)
             if(valor.length === 0){
               throw new Error(" not found")
             }
             return{
               ...state,
-              search:valor
+              search:valor,
+            
             }
           } catch (error) {
              alert(error)
